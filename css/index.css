@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+:root {
+    --lightYellow: hsl(56, 100%, 94%);
+    --lightGreen: hsl(80, 88%, 86%);
+    --lightOrange: hsl(35, 100%, 85%);
+    --lightPink: hsl(0, 100%, 90%);
+    --lightPurple: hsl(245, 48%, 89%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(240, 2%, 79%);
+    --darkGrayishPurple: hsl(207, 13%, 34%);
+    --darkBlue: hsl(237, 23%, 32%);
+    --darkGray: hsl(240, 10%, 16%);
+
+    --fontRubik: 'Rubik', sans-serif;
+    --fontHelvetica: 'Helvetica', sans-serif;
+}
+
+/* hsl(272, 23%, 32%); #574162 otro fondo barra superior */
+
+body {
+    background-color: var(--lightPurple);
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    border: solid 1px black ; /* -------------------------------borrar */
+}
+
+.header-container {
+    height: 7rem;
+    background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.profile-icon {
+    height: 2.6rem;
+}
+
+.filter__checkbox {
+    display: none;
+}
+
+.search__checkbox {
+    display: none;
+}
+
+.filter-icon {
+    cursor: pointer;
+    height: 2.6rem;
+}
+
+.search-window {  /* ---------------------------------------------SEARCH CONTENT */
+    display: none;
+}
+
+.search__input {
+   height: 2.4rem;
+   width: 22rem;
+   border-radius: 1.2rem;
+   border: 0;
+}
+
+.search__input input {
+    font-family: var(--fontRubik);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--darkGray);
+    text-align: center;
+}
+
+.search__input input::placeholder {
+    font-family: var(--fontRubik);
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 1rem;
+    color: var(--gray);
+    padding: 1rem;
+}
+
+.search__input:focus {
+    border: none;
+    outline: none;
+}
+
+/* .search__input:focus ~ .search-window {
+    display: block;
+    background-color: var(--white);
+    position: absolute;
+    top: 7rem;
+    list-style-type: none;
+    width: 90%;
+    border-radius: 5px;
+} */
+
+/* .search-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+} */
+
+/* .film-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.arrow-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.search-content ul {
+    list-style: none;
+    font-size: ;
+}
+
+.searchlist-item {
+    text-align: center;
+} */
+
+.filter-container { /* --------------------------------------------FILTER CONTENT */
+    display: none;
+}
+
+.filter__checkbox:checked ~ .filter-container {
+    display: block;
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    background-color: var(--darkBlue);
+    width: 100vw;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.filter-item {
+    margin: auto;
+    padding: 1rem;
+    color: var(--white);
+    font-family: var(--fontRubik);
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter__list {
+    width: 22rem;
+    height: 2.4rem;
+    border-radius: 1.5rem;
+    border: none;
+    outline: none;
+    font-family: var(--fontRubik);
+    font-size: 1.1rem;
+    color: var(--darkGray);
+    padding-left: 1.4rem;
+}
+
+/* .filter-item input {
+    font-family: var(--fontRubik);
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--darkGray);
+    text-align: center;
+    height: 2.6rem;
+    width: 24rem;
+    border-radius: 1.3rem;
+    border: 0;
+    outline: 0;
+} */
+
+.order, .sort-by {
+    display: block;
+    box-sizing: border-box;
+    margin: .5rem;
+}

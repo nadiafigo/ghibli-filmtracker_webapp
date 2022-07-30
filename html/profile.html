@@ -14,16 +14,76 @@
     <!----- HEADER ----->
     <header>
         <div class="header-container">
-            <div class="back-button">
-                <a href="../index.html">
-                    <img src="" alt="" > <!-- back icon -->
-                </a>
+            <a href="#" class="back-button">
+                <svg class="film-icon" width="32" height="18" xmlns=""> <!--movie icon-->
+                    <path d=""/>
+                </svg> <!-- back icon -->
+            </a>
             </div>
-            <div class="searh">
-                <a href="#"> <!-- search page link -->
-                    <img src="" alt="" ><!-- search icon -->
-                </a>
-            </div> <!-- search icon -->
+
+            <div class="input-search">
+                <input type="text">
+            </div>
+
+            <input type="checkbox" id="filter__checkbox" class="filter__checkbox">
+                <label for="filter__checkbox" class="filter__toggle">
+                    <svg class="filter-icon" width="32" height="18" xmlns=""> <!-- filter icon -->
+                    <!-- <g fill="#FFF" fill-rule="evenodd">
+                        <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/>
+                    </g> -->
+                    </svg>
+                </label>
+
+            <input type="checkbox" id="search__checkbox" class="search__checkbox">
+            <label for="search__checkbox" class="search__toggle">
+                <svg class="search-icon" width="32" height="18" xmlns=""> <!-- search icon -->
+                    <!-- <g fill="#FFF" fill-rule="evenodd">
+                        <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/>
+                    </g> -->
+                </svg>
+            </label>
+
+            <div class="search-container"> <!-- search dropdown window -->
+                <ul class="search-results-list">
+                    <li >
+                        <svg class="film-icon" width="32" height="18" xmlns=""> <!--movie icon-->
+                            <path d=""/>
+                        </svg>
+                        <a href="#">Search result film</a> <!-- film link -->
+                    </li>
+                </ul>              
+
+                <div>
+                    <a href="#">See more results</a> <!-- more results link -->
+                        <svg class="arrow-icon" width="32" height="18" xmlns=""> <!--arrow icon-->
+                            <path d=""/>
+                        </svg>
+                </div>
+            </div> 
+
+            <div class="filter-container"> <!-- filter dropdown window -->
+                <div class="Sorting-container">
+                    <label for="sort-by">
+                        <span class="sort-by">Sort by</span>
+                        <input list="sorting-list">
+                        <datalist id="sorting-list">
+                            <option value="Duration"></option>
+                            <option value="Year"></option>
+                            <option value="Audience Score"></option>
+                        </datalist>
+                    </label>
+                </div>
+                <div class="ordering-container">
+                    <label for="order">
+                        <span class="order">Sort by</span>
+                        <input list="order-list">
+                        <datalist id="order-list">
+                            <option value="Ascendant"></option>
+                            <option value="Descendant"></option>
+                        </datalist>
+                    </label>
+                </div>
+            </div> 
         </div>
     </header>
 
