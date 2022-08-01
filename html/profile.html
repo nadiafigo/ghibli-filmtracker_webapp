@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href=""> <!-- webpage icon -->
     <title>Studio Ghibli Filmtracker | Profile</title>
-    <link href="" rel="stylesheet" /> <!-- font family link -->
-    <link rel="stylesheet" href=""> <!-- font family link -->
+    <link href="../css/profile.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -15,72 +14,52 @@
     <header>
         <div class="header-container">
             <a href="#" class="back-button">
-                <svg class="film-icon" width="32" height="18" xmlns=""> <!--movie icon-->
-                    <path d=""/>
-                </svg> <!-- back icon -->
+                <img class="back-icon" src="../img/icons/icons8-atrás-50.png" alt="back-icon">
             </a>
-            </div>
 
-            <div class="input-search">
-                <input type="text">
-            </div>
+            <label for="search__input" class="search__input">
+                <input type="text" id="search__input" class="search__input" placeholder="🔍 What movie are you looking for?">
+            </label>
 
             <input type="checkbox" id="filter__checkbox" class="filter__checkbox">
                 <label for="filter__checkbox" class="filter__toggle">
-                    <svg class="filter-icon" width="32" height="18" xmlns=""> <!-- filter icon -->
-                    <!-- <g fill="#FFF" fill-rule="evenodd">
-                        <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/>
-                    </g> -->
-                    </svg>
+                    <img class="filter-icon" src="../img/icons/icons8-opciones-para-ordenar-50.png" alt="filter-icon">
                 </label>
 
-            <input type="checkbox" id="search__checkbox" class="search__checkbox">
-            <label for="search__checkbox" class="search__toggle">
-                <svg class="search-icon" width="32" height="18" xmlns=""> <!-- search icon -->
-                    <!-- <g fill="#FFF" fill-rule="evenodd">
-                        <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/>
-                    </g> -->
-                </svg>
-            </label>
 
-            <div class="search-container"> <!-- search dropdown window -->
-                <ul class="search-results-list">
-                    <li >
-                        <svg class="film-icon" width="32" height="18" xmlns=""> <!--movie icon-->
-                            <path d=""/>
-                        </svg>
-                        <a href="#">Search result film</a> <!-- film link -->
-                    </li>
-                </ul>              
-
-                <div>
-                    <a href="#">See more results</a> <!-- more results link -->
-                        <svg class="arrow-icon" width="32" height="18" xmlns=""> <!--arrow icon-->
-                            <path d=""/>
-                        </svg>
+            <div class="search-window"> <!-- search dropdown window -->
+                <div class="search-content">
+                    <ul class="search-results-list">
+                        <li class="searchlist-item">
+                            <img class="film-icon" src="../img/icons/icons8-carrete-de-película-50 (1).png" alt="">
+                            <a href="#">Search result film</a> <!-- film link -->
+                        </li>
+                    </ul>              
+                    <div class="more-results">
+                        <a href="#">See more results</a> <!-- more results link -->
+                        <img class="arrow-icon" src="../img/icons/icons8-derecha-50.png" alt="">
+                    </div>
                 </div>
             </div> 
 
-            <div class="filter-container"> <!-- filter dropdown window -->
-                <div class="Sorting-container">
+            <div class="filter-container"> 
+                <div class="filter-item">
                     <label for="sort-by">
                         <span class="sort-by">Sort by</span>
-                        <input list="sorting-list">
-                        <datalist id="sorting-list">
-                            <option value="Duration"></option>
-                            <option value="Year"></option>
-                            <option value="Audience Score"></option>
-                        </datalist>
+                        <select name="sort-by" id="sort-by" class="filter__list">
+                            <option value="Duration">Duration</option>
+                            <option value="Year">Year</option>
+                            <option value="Audience Score">Audience Score</option>
+                        </select>
                     </label>
                 </div>
-                <div class="ordering-container">
+                <div class="filter-item">
                     <label for="order">
-                        <span class="order">Sort by</span>
-                        <input list="order-list">
-                        <datalist id="order-list">
-                            <option value="Ascendant"></option>
-                            <option value="Descendant"></option>
-                        </datalist>
+                        <span class="order">Order</span>
+                        <select name="order" id="order" class="filter__list">
+                            <option value="Ascendant">Ascendant</option>
+                            <option value="Descendant">Descendant</option>
+                        </select>
                     </label>
                 </div>
             </div> 
@@ -91,7 +70,7 @@
     <main>
         <div class="profile-container">
             <div class="profile-pic">
-                <img src="#" alt="profile-picture">
+                <img src="../img/user-woman.jpg" alt="profile-picture">
             </div>
             <div>
                 <h1 class="prfl-username">Username</h1>

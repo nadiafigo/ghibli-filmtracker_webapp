@@ -46,16 +46,13 @@ body {
     padding: 1.5rem;
 }
 
-.profile-icon {
-    height: 2.6rem;
-}
-
 .filter__checkbox {
     display: none;
 }
 
-.search__checkbox {
-    display: none;
+.back-icon {
+    cursor: pointer;
+    height: 2.6rem;
 }
 
 .filter-icon {
@@ -96,43 +93,9 @@ body {
     outline: none;
 }
 
-/* .search__input:focus ~ .search-window {
-    display: block;
-    background-color: var(--white);
-    position: absolute;
-    top: 7rem;
-    list-style-type: none;
-    width: 90%;
-    border-radius: 5px;
-} */
+/* --------------------------------------------FILTER CONTENT */
 
-/* .search-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-} */
-
-/* .film-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.arrow-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.search-content ul {
-    list-style: none;
-    font-size: ;
-}
-
-.searchlist-item {
-    text-align: center;
-} */
-
-.filter-container { /* --------------------------------------------FILTER CONTENT */
+.filter-container {
     display: none;
 }
 
@@ -195,77 +158,66 @@ body {
     margin: .5rem;
 }
 
-
-
 /* --------------------------------------------MAIN CONTENT */
 
-.filmlist-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+main {
+    color: var(--darkGrayishPurple);
     padding: 4rem;
 }
 
-/* --------------------------------------------FILM CARDS */
-
-.film {
-    background-color: var(--white);
-    height: 16rem;
-    width: 32rem;
-    border-radius:1.5rem;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 8px var(--lightPurple);
-}
-
-.film-pic {
-    background-color: var(--lightYellow);
-    width: 14rem;
-    height: 16rem;
-    border-radius: 1.5rem 0 0 1.5rem;
-    /* background-image: sr; */
-}
-
-.film-info {
-    background-color: var(--white);
-    width: 18rem;
-    height: 16rem;
-    border-radius: 0 1.5rem 1.5rem 0;
-    padding: 1.5rem;
+.profile-container {
     display: flex;
     flex-direction: column;
-    font-family: var(--fontRubik);
-    color: var(--darkGrayishPurple);
+    align-items: center;
+    justify-content: center;
 }
 
-.film-title {
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+
+.film-record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: 1.4rem;
+}
+
+.profile-pic img{
+    height: 18rem;
+    width: 18rem;
+    border-radius: 9rem;
+}
+
+.profile-container h1 {
+    font-size: 3rem;
+    font-weight:400;
+    margin-top: 1rem;
+}
+
+.record-track-container {
+    width: 30rem;
+    height: 4rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    background-color: var(--white);
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-
-.film-title h3 {
-    width: 90%;
-    font-size: 1.8rem;
-    font-weight: 500;
+.record-track-line {
+    background-color: var(--lightOrange);
+    width: 20rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    margin: .5rem;
 }
-
-.checkmark {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    border: solid .1rem var(--lightPurple);
-}
-
-.film-info p {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.description {
-    margin-top: 1.8rem;
-}
-
-
 
