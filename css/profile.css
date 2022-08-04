@@ -55,6 +55,11 @@ body {
     height: 2.6rem;
 }
 
+.back-button {
+    border: none;
+    background-color: var(--lightPurple);
+}
+
 .filter-icon {
     cursor: pointer;
     height: 2.6rem;
@@ -136,6 +141,7 @@ body {
     font-size: 1.1rem;
     color: var(--lightPurple);
     padding-left: 1.2rem;
+    background-color: white;
 }
 
 

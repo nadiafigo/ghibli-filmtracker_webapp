@@ -46,20 +46,23 @@ body {
     padding: 1.5rem;
 }
 
-.profile-icon {
-    height: 2.6rem;
-    cursor: pointer;
-    user-select: none;
-}
-
 .filter__checkbox {
     display: none;
+}
+
+.back-icon {
+    cursor: pointer;
+    height: 2.6rem;
+}
+
+.back-button {
+    border: none;
+    background-color: var(--lightPurple);
 }
 
 .filter-icon {
     cursor: pointer;
     height: 2.6rem;
-    user-select: none;
 }
 
 .search-window {  /* ---------------------------------------------SEARCH CONTENT */
@@ -95,43 +98,9 @@ body {
     outline: none;
 }
 
-/* .search__input:focus ~ .search-window {
-    display: block;
-    background-color: var(--white);
-    position: absolute;
-    top: 7rem;
-    list-style-type: none;
-    width: 90%;
-    border-radius: 5px;
-} */
+/* --------------------------------------------FILTER CONTENT */
 
-/* .search-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-} */
-
-/* .film-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.arrow-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.search-content ul {
-    list-style: none;
-    font-size: ;
-}
-
-.searchlist-item {
-    text-align: center;
-} */
-
-.filter-container { /* --------------------------------------------FILTER CONTENT */
+.filter-container {
     display: none;
 }
 
@@ -175,81 +144,62 @@ body {
     background-color: white;
 }
 
+
+/* .filter-item input {
+    font-family: var(--fontRubik);
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--darkGray);
+    text-align: center;
+    height: 2.6rem;
+    width: 24rem;
+    border-radius: 1.3rem;
+    border: 0;
+    outline: 0;
+} */
+
 .order, .sort-by {
     display: block;
     box-sizing: border-box;
     margin: .5rem;
 }
 
-
-
 /* --------------------------------------------MAIN CONTENT */
 
-.filmlist-container {
+main {
+    color: var(--darkGrayishPurple);
+    padding: 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    text-decoration: none;
-
 }
 
-/* --------------------------------------------FILM CARDS */
-
-.film {
-    background-color: var(--white);
-    width: 34rem;
-    height: 16rem;
-    border-radius:1.5rem;
+.title-container {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 8px var(--lightPurple);
-    outline: none;
-    border: none;
-    text-decoration: none;
-    margin-top: 3rem;
-}
-
-.film-pic {
-    background-color: var(--lightYellow);
-    width: 12rem;
-    height: 16rem;
-    border-radius: 1.5rem 0 0 1.5rem;
-}
-
-.film-info {
-    background-color: var(--white);
-    width: 22rem;
-    height: 16rem;
-    border-radius: 0 1.5rem 1.5rem 0;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--fontRubik);
-    color: var(--darkGrayishPurple);
-    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .film-title {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    text-decoration: none;
+    font-size: 2.8rem;
 }
 
-
-.film-title h3 {
-    width: 90%;
-    font-size: 1.8rem;
-    font-weight: 500;
+.year {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: .8rem;
+    margin-top: .5rem;
 }
 
-.checkmark {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 1.4rem;
-    border: solid .2rem var(--lightPurple);
+.film__checkbox {
+    display: none;
+}
+
+.film__checkmark {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: solid .2rem var(--white);
 
     display: flex;
     flex-direction: column;
@@ -257,54 +207,67 @@ body {
     justify-content: center;
 }
 
-.film__checkbox {
-    display: none;
-}
-
 .checked-icon {
-    height: 1.8rem;
+    height: 2.8rem;
 }
 
-.film__checkbox:hover ~ .checkmark {
+.film__checkbox:hover ~ .film__checkmark {
     background-color: var(--lightPurple);
-    user-select: none;
+}
+
+.film__checkbox:hover ~ .checked-icon {
+    display: block;
 }
 
 
-.film__checkbox:checked ~ .checkmark {
+.film__checkbox:checked ~ .film__checkmark {
     background-color: var(--lightPink);
     border: solid .2rem var(--lightPink);
-    user-select: none;
 
 }
 
-.film-info p {
-    font-size: 1rem;
-    font-weight: 400;
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film-picture {
+    height: 25rem;
+    width: 30rem;
+    border-radius: 2rem;
+    background-color: var(--gray);
+    margin-top: 4rem;
+}
+
+.rating-scores {
+    margin-top: 2rem;
+    width: 30rem;
+}
+
+.score {
+    height: 4rem;
+    width: 100%;
+    margin-top: 2rem;
     text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
 }
 
-.description {
-    margin-top: 1.2rem;
-    overflow: hidden;
-    height: 6rem;
+.film-description {
+    height: 18rem;
+    width: 30rem;
+    margin-top: 3rem;
 }
 
-.star-rating {
-    margin-top: .5rem;
-    user-select: none;
+.descr-text {
+    text-align: justify;
 }
 
-.star {
-    font-size: 2rem;
-    color: var(--lightOrange);
-    /* border: solid .1rem var(--lightOrange); */
-    background-color: unset;
-    border: none;
+.more-info {
+    display: block;
+    margin-top: 3rem;
 }
 
-.star:hover {
-    cursor: pointer;
-
-}
 

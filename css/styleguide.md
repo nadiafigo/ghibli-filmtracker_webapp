@@ -20,7 +20,7 @@ The designs were created to the following widths:
 - LightGrene: hsl(80, 88%, 86%)
 - LightOrange: hsl(35, 100%, 85%)
 - LightPink: hsl(0, 100%, 90%)
-- LightPurple: hsl(245, 48%, 89%)
+- LightPurple: hsl(245, 48%, 89%) #D9D6F0
 
 
 # Neutral

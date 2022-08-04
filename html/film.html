@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href=""> <!-- webpage icon -->
-    <title>Studio Ghibli Filmtracker | Profile</title>
-    <link href="../css/profile.css" rel="stylesheet"/>
+    <title>Studio Ghibli Filmtracker | Film details</title>
+    <link href="../css/film.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -68,27 +68,49 @@
 
     <!----- MAIN ----->
     <main>
-        <div class="profile-container">
-            <div class="profile-pic">
-                <img src="../img/user-woman.jpg" alt="profile-picture">
+        <section class="title-container">
+            <div id="film-header">
+                <!-- <h1 class="film-title">Title</h1>
+                <span class="year">(Year)</span> -->
             </div>
-            <h1 class="prfl-username">Username</h1>
+            <input type="checkbox" id="film__checkbox" class="film__checkbox">
+                <label for="film__checkbox" class="film__checkmark">
+                    <img class="checked-icon" src="../img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
+                </label>
+
+                <!-- DESPLEGAR EMOJIS SOBRE CÓMO TE HIZO SENTIR LA PELÍCULA -->
+
+        </section>
+
+        <div class="details-container">
+            <div id="film-picture">
+                <!-- <img class="film-picture" src="" alt=""> -->
+            </div>
+            <div class="rating-scores">
+                <div class="audience score">
+                    <span>Audience Score</span>
+                    <div id="star-rating__audience">
+                        <!-- <button class="star">${(info.rt_score >= 20)? "&#9733" : "&#9734"}</button>
+                <button class="star">${(info.rt_score >= 40)? "&#9733" : "&#9734"}</button>
+                <button class="star">${(info.rt_score >= 60)? "&#9733" : "&#9734"}</button>
+                <button class="star">${(info.rt_score >= 80)? "&#9733" : "&#9734"}</button>
+                <button class="star">${(info.rt_score >= 100)? "&#9733" : "&#9734"}</button> -->
+                    </div>
+                </div>
+                <div class="personal score">
+                    <span>Your Score</span>
+                    <div class="star-rating__personal">
+                    </div>
+                </div>
+            </div>
+            <div class="film-description" id="film-description">
+                <!-- <p class="descr-text">
+                    This is the film detailed description. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam est eaque accusantium. Cupiditate praesentium deserunt impedit maiores, veritatis earum veniam, ducimus voluptates sunt ab accusantium non id esse suscipit dolorum!
+                </p> -->
+                <!-- <a class="more-info">More info</a> -->
+            </div>
         </div>
-        <div class="settings-container">
-            <div class="scores-link">
-                <p>Scores</p>
-            </div>
-            <div>
-                <p>Passwords</p>
-            </div>
-        </div>
-        <div class="film-record">
-            <h3>Ghibli movies watched</h3>
-            <div class="record-track-container">
-                <div class="record-track-line"></div>
-            </div>
-            <p class="record-track-number">17/24</p>
-        </div>
+        <div></div>
     </main>
 
     <!----- FOOTER ----->
