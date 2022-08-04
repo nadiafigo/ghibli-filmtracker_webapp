@@ -16,22 +16,35 @@ console.log(film_id)
 fetch(url + "/" + film_id)
 .then((text) => text.json())
 .then((movie) => {
-    console.log(movie)
     h1FilmTitle.innerText = movie.title
     filmYear.innerText = movie.release_date
     filmImg.setAttribute('src', movie.image)
     
     audienceScore = ''
     audienceScore = `
-    <button class="star">${(movie.rt_score >= 20)? "&#9733" : "&#9734"}</button>
-    <button class="star">${(movie.rt_score >= 40)? "&#9733" : "&#9734"}</button>
-    <button class="star">${(movie.rt_score >= 60)? "&#9733" : "&#9734"}</button>
-    <button class="star">${(movie.rt_score >= 80)? "&#9733" : "&#9734"}</button>
-    <button class="star">${(movie.rt_score >= 100)? "&#9733" : "&#9734"}</button>`
+    <button class="rated-star">${(movie.rt_score >= 20)? "&#9733" : "&#9734"}</button>
+    <button class="rated-star">${(movie.rt_score >= 40)? "&#9733" : "&#9734"}</button>
+    <button class="rated-star">${(movie.rt_score >= 60)? "&#9733" : "&#9734"}</button>
+    <button class="rated-star">${(movie.rt_score >= 80)? "&#9733" : "&#9734"}</button>
+    <button class="rated-star">${(movie.rt_score >= 100)? "&#9733" : "&#9734"}</button>`
 
     divAudienceStars.innerHTML = audienceScore
 
     description.innerText = movie.description
 
     moreInfo.setAttribute('href', movie.url)
+});
+
+
+allStars.forEach((star, i) => {
+    star.onclick = function() {
+        let current_star_level = i + 1;
+        allStars.forEach((star, j) => {
+            if( current_star_level >= j + 1) {
+                star.innerHTML = '&#9733';
+            } else {
+                star.innerHTML = '&#9734';               
+            }
+        }
+        )}
 });

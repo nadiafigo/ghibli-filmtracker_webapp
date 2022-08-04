@@ -23,6 +23,7 @@ html {
     --darkGrayishPurple: hsl(207, 13%, 34%);
     --darkBlue: hsl(237, 23%, 32%);
     --darkGray: hsl(240, 10%, 16%);
+    --gold: rgb(209, 178, 5);
 
     --fontRubik: 'Rubik', sans-serif;
     --fontHelvetica: 'Helvetica', sans-serif;
@@ -180,6 +181,7 @@ main {
     justify-content: space-between;
 }
 
+
 .film-title {
     font-size: 2.8rem;
 }
@@ -241,7 +243,6 @@ main {
 }
 
 .rating-scores {
-    margin-top: 2rem;
     width: 30rem;
 }
 
@@ -249,7 +250,7 @@ main {
     height: 4rem;
     width: 100%;
     margin-top: 2rem;
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
     font-style: italic;
@@ -258,17 +259,49 @@ main {
 .film-description {
     height: 18rem;
     width: 30rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 1.2rem;
+}
+
+.film-description h3 {
+    font-size: 1.6rem;
 }
 
 .descr-text {
     text-align: justify;
+    margin-top: 1rem;
 }
 
 .more-info {
     display: block;
     margin-top: 3rem;
+}
+
+
+.star-rating__audience {
+    user-select: none;
+}
+
+.rated-star {
+    font-size: 2.8rem;
+    color: var(--gold);
+    background-color: unset;
+    border: none;
+}
+
+.star {
+    font-size: 2.8rem;
+    color: var(--gold);
+    background-color: unset;
+    border: none;
+}
+
+.star-rating__personal {
+    user-select: none;
+}
+
+.star:hover {
+    cursor: pointer;
 }
 
 

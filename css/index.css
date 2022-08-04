@@ -21,8 +21,11 @@ html {
     --white: hsl(0, 0%, 100%);
     --gray: hsl(240, 2%, 79%);
     --darkGrayishPurple: hsl(207, 13%, 34%);
+    --darkPurple: hsl(272, 23%, 32%);
     --darkBlue: hsl(237, 23%, 32%);
     --darkGray: hsl(240, 10%, 16%);
+
+    --gold: rgb(209, 178, 5);
 
     --fontRubik: 'Rubik', sans-serif;
     --fontHelvetica: 'Helvetica', sans-serif;
@@ -170,7 +173,7 @@ body {
     font-family: var(--fontRubik);
     font-style: italic;
     font-size: 1.1rem;
-    color: var(--lightPurple);
+    color: var(--gray);
     padding-left: 1.2rem;
     background-color: white;
 }
@@ -300,7 +303,7 @@ body {
 
 .star {
     font-size: 1.8rem;
-    color: var(--lightOrange);
+    color: var(--gold);
     /* border: solid .1rem var(--lightOrange); */
     background-color: unset;
     border: none;

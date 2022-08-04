@@ -16,19 +16,21 @@ The designs were created to the following widths:
 ## Colors 
 
 ## Primary 
-- LightYellow: hsl(56, 100%, 94%)  
-- LightGrene: hsl(80, 88%, 86%)
-- LightOrange: hsl(35, 100%, 85%)
-- LightPink: hsl(0, 100%, 90%)
+- LightYellow: hsl(56, 100%, 94%)  #FFF5E0
+- LightGrene: hsl(80, 88%, 86%)  #E6FBBB
+- LightOrange: hsl(35, 100%, 85%) #FFDFB3
+- LightPink: hsl(0, 100%, 90%)  #FFCCCC
 - LightPurple: hsl(245, 48%, 89%) #D9D6F0
+- VeryLightPurple: hsl(270, 60%, 96%) #F5EFFB
 
 
 # Neutral
-- White: hsl(0, 0%, 100%)
-- Gray: hsl(240, 2%, 79%)
-- DarkGrayishPurple: hsl(207, 13%, 34%)
-- DarkBlue hsl(237, 23%, 32%)
-- DarkGray: hsl(240, 10%, 16%)
+- White: hsl(0, 0%, 100%) #FFFFFF
+- Gray: hsl(240, 2%, 79%) #C9C9C9
+- DarkGrayishPurple: hsl(207, 13%, 34%) #4B5B62
+- DarkPurple: hsl(272, 23%, 32%) #574162
+- DarkBlue hsl(237, 23%, 32%)#414362
+- DarkGray: hsl(240, 10%, 16%)  #212131
 
 ## Typography
 

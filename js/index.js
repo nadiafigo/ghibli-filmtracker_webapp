@@ -15,7 +15,7 @@ fetch(url)
             <img class="film-pic" src="${info.image}"/>
             <div class="film-info">
             <div class="film-title">
-                <h3 class="title">${info.title}</h6>
+                <h3 class="title">${info.title}</h3>
                     <input type="checkbox" id="film__checkbox_${i}" class="film__checkbox">
                     <label for="film__checkbox_${i}" class="checkmark">
                         <img class="checked-icon" src="./img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
