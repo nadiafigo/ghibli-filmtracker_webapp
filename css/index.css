@@ -189,7 +189,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
     text-decoration: none;
 
 }
@@ -236,12 +237,13 @@ body {
     flex-direction: row;
     text-align: left;
     text-decoration: none;
+    align-items: center;
 }
 
 
 .film-title h3 {
     width: 90%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -278,25 +280,26 @@ body {
 
 }
 
-.film-info p {
+.year {
     font-size: 1rem;
     font-weight: 400;
     text-align: left;
 }
 
 .description {
-    margin-top: 1.2rem;
+    margin-top: .6rem;
     overflow: hidden;
-    height: 6rem;
+    height: 7rem;
+    font-size: .6;
 }
 
 .star-rating {
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
     user-select: none;
 }
 
 .star {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--lightOrange);
     /* border: solid .1rem var(--lightOrange); */
     background-color: unset;

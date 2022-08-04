@@ -70,32 +70,25 @@
     <main>
         <section class="title-container">
             <div id="film-header">
-                <!-- <h1 class="film-title">Title</h1>
-                <span class="year">(Year)</span> -->
+                <h1 class="film-title" id="film-title"></h1>
             </div>
             <input type="checkbox" id="film__checkbox" class="film__checkbox">
                 <label for="film__checkbox" class="film__checkmark">
                     <img class="checked-icon" src="../img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
                 </label>
-
                 <!-- DESPLEGAR EMOJIS SOBRE CÓMO TE HIZO SENTIR LA PELÍCULA -->
 
         </section>
+        <span class="year" id="year"></span>
 
         <div class="details-container">
-            <div id="film-picture">
-                <!-- <img class="film-picture" src="" alt=""> -->
+            <div>
+                <img id="film-picture" class="film-picture" src="" alt="">
             </div>
             <div class="rating-scores">
                 <div class="audience score">
                     <span>Audience Score</span>
-                    <div id="star-rating__audience">
-                        <!-- <button class="star">${(info.rt_score >= 20)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 40)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 60)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 80)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 100)? "&#9733" : "&#9734"}</button> -->
-                    </div>
+                    <div id="star-rating__audience"></div>
                 </div>
                 <div class="personal score">
                     <span>Your Score</span>
@@ -103,11 +96,11 @@
                     </div>
                 </div>
             </div>
-            <div class="film-description" id="film-description">
-                <!-- <p class="descr-text">
+            <div class="film-description">
+                <p class="descr-text" id="film-description">
                     This is the film detailed description. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam est eaque accusantium. Cupiditate praesentium deserunt impedit maiores, veritatis earum veniam, ducimus voluptates sunt ab accusantium non id esse suscipit dolorum!
-                </p> -->
-                <!-- <a class="more-info">More info</a> -->
+                </p>
+                <a href="" id="more-info" class="more-info">More info</a>
             </div>
         </div>
         <div></div>
@@ -118,7 +111,7 @@
 
     </footer>
 
-    <!----- JS FILES ----->
+    <script src="../js/film.js"></script>
 </body>
 
 </html>

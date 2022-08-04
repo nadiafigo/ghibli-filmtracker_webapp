@@ -187,7 +187,7 @@ main {
 .year {
     display: block;
     font-size: 1.5rem;
-    margin-left: .8rem;
+    margin-left: .4rem;
     margin-top: .5rem;
 }
 
@@ -196,9 +196,9 @@ main {
 }
 
 .film__checkmark {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 2rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
     border: solid .2rem var(--white);
 
     display: flex;
@@ -208,7 +208,7 @@ main {
 }
 
 .checked-icon {
-    height: 2.8rem;
+    height: 3rem;
 }
 
 .film__checkbox:hover ~ .film__checkmark {
@@ -234,10 +234,10 @@ main {
 
 .film-picture {
     height: 25rem;
-    width: 30rem;
+    width: 20rem;
     border-radius: 2rem;
     background-color: var(--gray);
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .rating-scores {
@@ -259,6 +259,7 @@ main {
     height: 18rem;
     width: 30rem;
     margin-top: 3rem;
+    font-size: 1.2rem;
 }
 
 .descr-text {
