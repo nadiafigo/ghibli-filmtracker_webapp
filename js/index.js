@@ -50,8 +50,10 @@ fetch(url)
             console.log(searchItem)
             if(searchItem.includes(value)) {
                 film.element.classList.add('visible')
+                film.element.classList.remove('hide')
             } else {
                 film.element.classList.add('hide')
+                film.element.classList.remove('visible')
             }
         })
     
