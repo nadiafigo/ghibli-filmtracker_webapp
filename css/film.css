@@ -23,7 +23,7 @@ html {
     --darkGrayishPurple: hsl(207, 13%, 34%);
     --darkBlue: hsl(237, 23%, 32%);
     --darkGray: hsl(240, 10%, 16%);
-    --gold: rgb(209, 178, 5);
+    --gold: rgb(227, 201, 51);
 
     --fontRubik: 'Rubik', sans-serif;
     --fontHelvetica: 'Helvetica', sans-serif;
@@ -169,7 +169,7 @@ body {
 
 main {
     color: var(--darkGrayishPurple);
-    padding: 4rem;
+    padding: 3rem 4rem 4rem 4rem;
     display: flex;
     flex-direction: column;
 }
@@ -182,15 +182,13 @@ main {
 }
 
 
-.film-title {
+.det_film-title {
     font-size: 2.8rem;
 }
 
-.year {
+.det_year {
     display: block;
-    font-size: 1.5rem;
-    margin-left: .4rem;
-    margin-top: .5rem;
+    font-size: 1.8rem;
 }
 
 .film__checkbox {
@@ -243,13 +241,22 @@ main {
 }
 
 .rating-scores {
+    margin-top: 2rem;
     width: 30rem;
+    height: 14rem;
+    border-radius: 2rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 1rem;
 }
 
 .score {
     height: 4rem;
     width: 100%;
-    margin-top: 2rem;
+    /* margin-top: 1.4rem; */
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
@@ -277,6 +284,11 @@ main {
     margin-top: 3rem;
 }
 
+.more-info a {
+    color: var(--lightPink);
+}
+
+
 
 .star-rating__audience {
     user-select: none;
@@ -302,6 +314,17 @@ main {
 
 .star:hover {
     cursor: pointer;
+}
+
+
+
+.attribution {
+    padding: 0 4.6rem 4rem 4.6rem;
+    color: var(--darkBlue);
+}
+
+.attribution a {
+    color: var(--darkBlue);
 }
 
 

@@ -20,8 +20,15 @@
                 </a>
             </div>
 
+            <!-- <div class="search-wrapper" id="data-search">
+                <label for="search"></label>
+                <input type="search" id="search">
+            </div> -->
+
             <label for="search__input" class="search__input">
-                <input type="text" id="search__input" class="search__input" placeholder="🔍 What movie are you looking for?">
+                <input list="film-search" type="text" id="search__input" class="search__input" placeholder="🔍 What movie are you looking for?">
+                <!-- <datalist list="film-search" id="film-search">
+                </datalist> -->
             </label>
 
             <input type="checkbox" id="filter__checkbox" class="filter__checkbox">
@@ -30,20 +37,20 @@
                 </label>
 
 
-            <div class="search-window"> <!-- search dropdown window -->
+            <!-- <div class="search-window"> 
                 <div class="search-content">
                     <ul class="search-results-list">
                         <li class="searchlist-item">
                             <img class="film-icon" src="./img/icons/icons8-carrete-de-película-50 (1).png" alt="">
-                            <a href="#">Search result film</a> <!-- film link -->
+                            <a href="#">Search result film</a> 
                         </li>
                     </ul>              
                     <div class="more-results">
-                        <a href="#">See more results</a> <!-- more results link -->
+                        <a href="#">See more results</a>
                         <img class="arrow-icon" src="./img/icons/icons8-derecha-50.png" alt="">
                     </div>
                 </div>
-            </div> 
+            </div>  -->
 
             <div class="filter-container"> 
                 <div class="filter-item">
@@ -72,23 +79,30 @@
 
     <!----- MAIN ----->
     <main>
-        <div class="filmlist-container" id="filmlist-container">
-            <!-- <a class="film" href="./html/film.html">
-                <div class="film-pic"></div>
-                <div class="film-info">
+        <div class="filmlist-container" id="filmlist-container"></div>
+        <template film-card-template>
+            <div>
+                <a class="film" id="" href="" film-card >
+                    <img class="film-pic" src="" img-card/>
+                    <div class="film-info">
                     <div class="film-title">
-                        <h3 class="title">Title</h6>
-                            <input type="checkbox" id="film__checkbox" class="film__checkbox">
-                            <label for="film__checkbox" class="checkmark">
+                        <h3 class="title" film-title></h3>
+                            <input type="checkbox" id="" class="film__checkbox" checkmark-input>
+                            <label for="" class="checkmark" checkmark-label>
                                 <img class="checked-icon" src="./img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
                             </label>
                     </div>
-                    <p class="year">Year</p>
-                    <p class="description">This is the film description and review</p>
-                    <div class="stars"></div>
-                </div>
-            </a> -->
-        </div>
+                    <p class="year" film-year></p>
+                    <p class="description" film-description></p>
+                    <div class="star-rating" star-rating>
+                        <!-- AUDIENCE RATING IMPLEMENTED BY JS -->
+                    </div>
+                    </div>
+                </a>
+            </div>
+            
+        </template>
+            
     </main>
 
     <!----- FOOTER ----->

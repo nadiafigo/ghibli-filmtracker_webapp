@@ -301,9 +301,9 @@ body {
     user-select: none;
 }
 
-.star {
+.h_star {
     font-size: 1.8rem;
-    color: var(--gold);
+    color: var(--lightOrange);
     /* border: solid .1rem var(--lightOrange); */
     background-color: unset;
     border: none;
@@ -312,5 +312,9 @@ body {
 .star:hover {
     cursor: pointer;
 
+}
+
+.hide {
+    display: none;
 }
 

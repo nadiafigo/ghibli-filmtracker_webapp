@@ -1,7 +1,7 @@
 let url = 'https://ghibliapi.herokuapp.com/films'
 
-const h1FilmTitle = document.getElementById('film-title')
-const filmYear = document.getElementById('year')
+const h1FilmTitle = document.getElementById('det_film-title')
+const filmYear = document.getElementById('det_year')
 const filmImg = document.getElementById('film-picture');
 const divAudienceStars = document.getElementById('star-rating__audience');
 const allStars = document.querySelectorAll('.star');

@@ -1,40 +1,73 @@
 let url = 'https://ghibliapi.herokuapp.com/films'
 
 const divFilmCards = document.getElementById('filmlist-container');
-const allStars = document.querySelectorAll('.star');
+const filmCardTemplate = document.querySelector('[film-card-template]')
 
-fetch(url) 
+const searchInput = document.getElementById('search__input');
+
+
+let films = []
+
+fetch(url)
     .then((text) => text.json())
     .then((data) => {
-        console.log(data)
-        console.log(data.length)
-        let card = ""
-        for(let i = 0; i < data.length; i++) {
-            info = data[i]
-            card = `${card}<a class="film" href="./html/film.html?film_id=${info.id}">
-            <img class="film-pic" src="${info.image}"/>
-            <div class="film-info">
-            <div class="film-title">
-                <h3 class="title">${info.title}</h3>
-                    <input type="checkbox" id="film__checkbox_${i}" class="film__checkbox">
-                    <label for="film__checkbox_${i}" class="checkmark">
-                        <img class="checked-icon" src="./img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
-                    </label>
-            </div>
-            <p class="year">${info.release_date}</p>
-            <p class="description">${info.description}</p>
-            <div class="star-rating">
-                <button class="star">${(info.rt_score >= 20)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 40)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 60)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 80)? "&#9733" : "&#9734"}</button>
-                <button class="star">${(info.rt_score >= 100)? "&#9733" : "&#9734"}</button>
-            </div>
-            </div>
-        </a>`
+        films = data.map ((film, i) => {
+            const card = filmCardTemplate.content.cloneNode(true).children[0]
+            const enlace = card.querySelector("[film-card]")
+            const picture = card.querySelector("[img-card]")
+            const filmTitle = card.querySelector("[film-title]")
+            const checkmarkInput = card.querySelector("[checkmark-input]")
+            const checkmarkLabel = card.querySelector("[checkmark-label]")
+            const filmYear = card.querySelector("[film-year]")
+            const filmDescription = card.querySelector("[film-description]")
+            const filmRating = card.querySelector("[star-rating]")
+            enlace.setAttribute('href', "./html/film.html?film_id=" + film.id)
+            enlace.setAttribute('id', "card" + i)
+            picture.setAttribute('src', film.image)
+            filmTitle.innerText = film.title
+            checkmarkInput.setAttribute('id', "film__checkbox" + i)
+            checkmarkLabel.setAttribute('for', "film__checkbox" + i)
+            filmYear.innerText = film.release_date
+            filmDescription.innerText = film.description
+            filmRating.innerHTML = `<button class="h_star">${(film.rt_score >= 20)? "&#9733" : "&#9734"}</button>
+            <button class="h_star">${(film.rt_score >= 36)? "&#9733" : "&#9734"}</button>
+            <button class="h_star">${(film.rt_score >= 56)? "&#9733" : "&#9734"}</button>
+            <button class="h_star">${(film.rt_score >= 76)? "&#9733" : "&#9734"}</button>
+            <button class="h_star">${(film.rt_score >= 96)? "&#9733" : "&#9734"}</button>`
+            divFilmCards.append(card)
+            return {id: film.id, title: film.title, year: film.release_date, audienceScore: film.rt_score, duration: film.running_time, element: card}
+        })
     }
-        divFilmCards.innerHTML = card
-    });
+
+    );
+
+    searchInput.addEventListener("input", e => {
+        const value = e.target.value.toLowerCase()
+        console.log(value)
+        films.forEach(film => {
+            let searchItem = ""
+            searchItem = film.title.toLowerCase()
+            console.log(searchItem)
+            if(searchItem.includes(value)) {
+                film.element.classList.add('visible')
+            } else {
+                film.element.classList.add('hide')
+            }
+        })
+    
+    })
 
 
+// fetch(url) 
+//     .then((text) => text.json())
+//     .then((data) => {
+//         let search = ""
+//         for(let i = 0; i < data.length; i++) {
+//             info = data[i]
+//             search = `${search}<a href="./html/film.html?film_id=${info.id}"><option>${info.title}</option></a>`
+//             // search = `${search}<option><a href="./html/film.html?film_id=${info.id}">${info.title}</a></option>`
+//     }
 
+//     datalistContainer.innerHTML = search
+
+//     })});
