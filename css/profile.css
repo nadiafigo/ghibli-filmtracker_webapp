@@ -50,10 +50,6 @@ body::before {
     background-size: cover;
 }
 
-main {
-    height: 90vh;
-}
-
 header {
     margin: 0px auto;
 }
@@ -87,7 +83,7 @@ header {
 
 main {
     color: var(--white);
-    padding: 15rem 4rem 4rem 4rem;
+    padding: 12rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -124,9 +120,9 @@ main {
 }
 
 .profile-pic img{
-    height: 24rem;
-    width: 24rem;
-    border-radius: 12rem;
+    height: 22rem;
+    width: 22rem;
+    border-radius: 11rem;
 }
 
 .profile-container h1 {
@@ -167,8 +163,6 @@ footer {
     display: block;
     font-size: 1.2rem;
     font-weight: 500;
-    position: absolute;
-    bottom: 0rem;
     background-color: var(--lightPurple);
 }
 
