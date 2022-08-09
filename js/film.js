@@ -34,7 +34,7 @@ fetch(url + "/" + film_id)
 
     description.innerText = movie.description
 
-    moreInfo.setAttribute('href', "https://ghibli.fandom.com/wiki" + movie.id)
+    moreInfo.setAttribute('href', "https://ghibli.fandom.com/" + movie.title)
 });
 
 
