@@ -31,8 +31,12 @@ html {
 /* hsl(272, 23%, 32%); #574162 otro fondo barra superior */
 
 body {
-    background-color: var(--veryLightPurple);
     font-family: 'Rubik', sans-serif;
+}
+
+main {
+    background-color: var(--veryLightPurple);
+    height: 84vh;
 }
 
 
@@ -46,9 +50,6 @@ body {
     padding: 1.5rem;
 }
 
-.filter__checkbox {
-    display: none;
-}
 
 .back-icon {
     cursor: pointer;
@@ -60,115 +61,15 @@ body {
     background-color: var(--lightPurple);
 }
 
-.filter-icon {
-    cursor: pointer;
-    height: 2.6rem;
-}
-
-.search-window {  /* ---------------------------------------------SEARCH CONTENT */
-    display: none;
-}
-
-.search__input {
-   height: 2.4rem;
-   width: 22rem;
-   border-radius: 1.2rem;
-   border: 0;
-}
-
-.search__input input {
-    font-family: var(--fontRubik);
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: var(--darkGray);
-    text-align: center;
-}
-
-.search__input input::placeholder {
-    font-family: var(--fontRubik);
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin: 1rem;
-    color: var(--gray);
-    padding: 1rem;
-}
-
-.search__input:focus {
-    border: none;
-    outline: none;
-}
-
-/* --------------------------------------------FILTER CONTENT */
-
-.filter-container {
-    display: none;
-}
-
-.filter__checkbox:checked ~ .filter-container {
-    display: block;
-    position: absolute;
-    top: 7rem;
-    right: 0;
-    background-color: var(--lightPurple);
-    width: 100vw;
-    padding: 1rem;
-    padding-bottom: 3rem;
-    border-radius: 0 0 1rem 1rem;
-    list-style-type: none;
-    align-items: center;
-}
-
-.filter-item {
-    margin: auto;
-    padding: 1rem;
-    color: var(--white);
-    font-family: var(--fontRubik);
-    font-weight: 400;
-    font-size: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.filter__list {
-    width: 22rem;
-    height: 2.4rem;
-    border-radius: 1.5rem;
-    border: none;
-    outline: none;
-    font-family: var(--fontRubik);
-    font-style: italic;
-    font-size: 1.1rem;
-    color: var(--lightPurple);
-    padding-left: 1.2rem;
-    background-color: white;
-}
-
-
-/* .filter-item input {
-    font-family: var(--fontRubik);
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: var(--darkGray);
-    text-align: center;
-    height: 2.6rem;
-    width: 24rem;
-    border-radius: 1.3rem;
-    border: 0;
-    outline: 0;
-} */
-
-.order, .sort-by {
-    display: block;
-    box-sizing: border-box;
-    margin: .5rem;
-}
 
 /* --------------------------------------------MAIN CONTENT */
 
 main {
     color: var(--darkGrayishPurple);
     padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .profile-container {
@@ -183,8 +84,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    border-radius: 2rem;
+    background-color: var(--white);
 }
 
 .film-record {
@@ -197,9 +101,9 @@ main {
 }
 
 .profile-pic img{
-    height: 18rem;
-    width: 18rem;
-    border-radius: 9rem;
+    height: 24rem;
+    width: 24rem;
+    border-radius: 12rem;
 }
 
 .profile-container h1 {
@@ -209,7 +113,7 @@ main {
 }
 
 .record-track-container {
-    width: 30rem;
+    width: 31rem;
     height: 4rem;
     border-radius: 2rem;
     margin: 1rem;
@@ -220,7 +124,7 @@ main {
 }
 
 .record-track-line {
-    background-color: var(--lightOrange);
+    background-color: var(--lightPink);
     width: 20rem;
     height: 3rem;
     border-radius: 1.5rem;
@@ -229,15 +133,18 @@ main {
 
 
 footer {
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--lightPurple);
 }
 
 .attribution {
-    padding: 0 4.6rem 4rem 4.6rem;
+    padding: 2rem 4.6rem 2rem 4.6rem;
     color: var(--darkBlue);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .attribution a {

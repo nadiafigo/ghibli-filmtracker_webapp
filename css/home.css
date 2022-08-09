@@ -188,11 +188,19 @@ body {
 
 /* --------------------------------------------MAIN CONTENT */
 
+.webapp-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--white);
+    text-shadow: 5px 5px 8px var(--lightPurple);
+    padding: 2rem 3rem 0 3rem;
+}
+
 .filmlist-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 0rem;
     padding-bottom: 8rem;
     text-decoration: none;
 
@@ -246,14 +254,16 @@ body {
 
 .film-title h3 {
     width: 90%;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     font-weight: 500;
 }
 
 .checkmark {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 1.4rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
     border: solid .2rem var(--lightPurple);
 
     display: flex;
@@ -267,7 +277,7 @@ body {
 }
 
 .checked-icon {
-    height: 1.8rem;
+    height: 2.2rem;
 }
 
 .film__checkbox:hover ~ .checkmark {
@@ -286,10 +296,11 @@ body {
 .film-details {
     display: flex;
     flex-direction: row;
+    
 }
 
-.year {
-    font-size: 1rem;
+.year, .duration, .space {
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: left;
     margin-right: 1rem;
@@ -308,7 +319,7 @@ body {
 }
 
 .h_star {
-    font-size: 1.8rem;
+    font-size: 3rem;
     color: var(--lightOrange);
     /* border: solid .1rem var(--lightOrange); */
     background-color: unset;
@@ -329,14 +340,17 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--lightPurple);
 }
 
 .attribution {
-    padding: 0 4.6rem 4rem 4.6rem;
+    padding: 2rem 4.6rem 2rem 4.6rem;
     color: var(--darkBlue);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .attribution a {
     color: var(--darkBlue);
 }
-

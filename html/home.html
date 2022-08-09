@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href=""> <!-- webpage icon -->
     <title>Studio Ghibli Filmtracker | HOME</title>
-    <link href="./css/index.css" rel="stylesheet" />
+    <link href="../css/home.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -15,8 +15,8 @@
     <header>
         <div class="header-container">
             <div class="profile-button">
-                <a href="./html/profile.html">
-                    <img n class="profile-icon" src="./img/icons/icons8-usuario-30_white.png" alt="">
+                <a href="./profile.html">
+                    <img n class="profile-icon" src="../img/icons/icons8-usuario-30_white.png" alt="">
                 </a>
             </div>
 
@@ -33,7 +33,7 @@
 
             <input type="checkbox" id="filter__checkbox" class="filter__checkbox">
                 <label for="filter__checkbox" class="filter__toggle">
-                    <img class="filter-icon" src="./img/icons/icons8-opciones-para-ordenar-50.png" alt="filter-icon">
+                    <img class="filter-icon" src="../img/icons/icons8-opciones-para-ordenar-50.png" alt="filter-icon">
                 </label>
 
             <div class="filter-container"> 
@@ -64,6 +64,7 @@
 
     <!----- MAIN ----->
     <main>
+        <h1 class="webapp-title">Studio Ghibli Filmtracker</h1>
         <div class="filmlist-container" id="filmlist-container"></div>
         <template film-card-template>
             <div>
@@ -74,11 +75,12 @@
                         <h3 class="title" film-title></h3>
                             <input type="checkbox" id="" class="film__checkbox" checkmark-input>
                             <label for="" class="checkmark" checkmark-label>
-                                <img class="checked-icon" src="./img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
+                                <img class="checked-icon" src="../img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
                             </label>
                     </div>
                     <div class="film-details">
                         <p class="year" film-year></p>
+                        <p class="space">  |  </p>
                         <p class="duration" duration></p>
                     </div>
                     
@@ -98,11 +100,11 @@
     <footer>
 
         <div class="attribution">
-            <p>Coded by <a href="https://nadiafigo.github.io/">Nadia Figueroa</a> for the final project of Latinas CodeCamp by <a href="https://technolatinas.org/">Technolatinas</a></p>
+            <p>Coded by <a href="https://nadiafigo.github.io/">Nadia Figueroa</a> as final project for the Latinas CodeCamp by <a href="https://technolatinas.org/">Technolatinas</a></p>
         </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="../js/home.js"></script>
 
 </body>
 

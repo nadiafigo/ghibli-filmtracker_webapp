@@ -24,9 +24,9 @@ fetch(url)
             const checkmarkLabel = card.querySelector("[checkmark-label]")
             const filmYear = card.querySelector("[film-year]")
             const filmDuration = card.querySelector("[duration]")
-            const filmDescription = card.querySelector("[film-description]")
+            // const filmDescription = card.querySelector("[film-description]")
             const filmRating = card.querySelector("[star-rating]")
-            enlace.setAttribute('href', "./html/film.html?film_id=" + film.id)
+            enlace.setAttribute('href', "../html/film.html?film_id=" + film.id)
             enlace.setAttribute('id', "card" + i)
             picture.setAttribute('src', film.image)
             filmTitle.innerText = film.title
@@ -34,7 +34,7 @@ fetch(url)
             checkmarkLabel.setAttribute('for', "film__checkbox" + i)
             filmYear.innerText = film.release_date
             filmDuration.innerText = film.running_time + " min"
-            filmDescription.innerText = film.description
+            // filmDescription.innerText = film.description
             filmRating.innerHTML = `<button class="h_star">${(film.rt_score >= 20)? "&#9733" : "&#9734"}</button>
             <button class="h_star">${(film.rt_score >= 36)? "&#9733" : "&#9734"}</button>
             <button class="h_star">${(film.rt_score >= 56)? "&#9733" : "&#9734"}</button>
@@ -44,6 +44,7 @@ fetch(url)
             return {id: film.id, title: film.title, year: film.release_date, audienceScore: film.rt_score, duration: film.running_time, element: card}
         })
     }
+
 
     );
 
