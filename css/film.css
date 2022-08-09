@@ -317,9 +317,15 @@ main {
 }
 
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
 .attribution {
-    padding: 0 4.6rem 4rem 4.6rem;
+    padding: 5rem 4.6rem 4rem 4.6rem;
     color: var(--darkBlue);
 }
 
