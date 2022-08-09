@@ -35,14 +35,37 @@ html {
 
 body {
     background-color: var(--veryLightPurple);
-    background-image: url(../img/home_bg_80fill.png);
-    width: auto;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-    background-attachment: fixed;
     font-family: 'Rubik', sans-serif;
+    /* &:before {
+        content:'';
+        content:"";
+        background-image: url(../img/home_bg_80fill.png);
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    } */
+}
+
+body::before {
+    content:"";
+    background-image: url(../img/home_bg_80fill.png);
+    width: 100%;
+    height: 100vh;
+    /* background-attachment: fixed; */
+    position: fixed;
+    background-position: 0% 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
