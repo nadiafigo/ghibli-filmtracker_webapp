@@ -32,7 +32,7 @@ html {
 
 body {
     background-color: var(--veryLightPurple);
-    background-image: url(../img/home_op.jpg);
+    background-image: url(../img/home_bg_80fill.png);
     width: auto;
     height: 100vh;
     background-repeat: no-repeat;

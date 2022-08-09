@@ -37,7 +37,7 @@ body {
     background-color: var(--veryLightPurple);
     background-image: url(../img/home_bg_80fill.png);
     width: auto;
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
