@@ -1,14 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
 
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBMWj_7CjLgoiBzqaoqCugI8JFP1xk-BUY",
   authDomain: "ghibli-webapp.firebaseapp.com",
@@ -19,12 +13,40 @@ const firebaseConfig = {
   measurementId: "G-Q1YCEX8LZL"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
 document.getElementById("sign-up").addEventListener('click', function(){
-    const email = document.getElementById("user-email")
+    const email = document.getElementById("user-email").value  
+    const password = document.getElementById("password").value 
+    const confirmPassword = document.getElementById("confirm-password").value 
+
+    console.log(email, password)
+
+    if(password.length <= 5) {
+        alert("The password must have 6 characters")
+        return
+    }
+
+    if(confirmPassword != password) {
+        alert("Verify your confirmation password")
+        return
+    }
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            
+            const user = userCredential.user;
+            console.log("created", user)
+            window.location.href = "../html/login.html"
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            
+            console.log(errorCode + errorMessage);
+        });
+
 })
