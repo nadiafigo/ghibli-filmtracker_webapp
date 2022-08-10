@@ -233,7 +233,7 @@ main {
     font-weight: 400;
     color: var(--white);
     text-shadow: 5px 5px 8px var(--darkPurple);
-    padding: 2rem 3rem 0 3rem;
+    padding: 2rem 5rem 0 5rem;
 }
 
 .filmlist-container {
@@ -244,14 +244,14 @@ main {
     padding-top: 0rem;
     padding-bottom: 8rem;
     text-decoration: none;
-
+    row-gap: 4rem;
 }
 
 /* --------------------------------------------FILM CARDS */
 
 .film {
     background-color: var(--white);
-    width: 34rem;
+    width: 32rem;
     height: 16rem;
     border-radius:1.5rem;
     display: flex;
@@ -261,7 +261,6 @@ main {
     outline: none;
     border: none;
     text-decoration: none;
-    margin-top: 3rem;
 }
 
 .film-pic {
@@ -289,12 +288,11 @@ main {
     flex-direction: row;
     text-align: left;
     text-decoration: none;
-    align-items: center;
 }
 
 
 .film-title h3 {
-    width: 90%;
+    width: 85%;
     font-size: 1.8rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -302,9 +300,9 @@ main {
 }
 
 .checkmark {
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 1.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 1.8rem;
     border: solid .2rem var(--lightPurple);
 
     display: flex;
@@ -318,7 +316,7 @@ main {
 }
 
 .checked-icon {
-    height: 2.2rem;
+    height: 2.6rem;
 }
 
 .film__checkbox:hover ~ .checkmark {
@@ -360,7 +358,7 @@ main {
 }
 
 .h_star {
-    font-size: 3rem;
+    font-size: 2.6rem;
     color: var(--lightOrange);
     /* border: solid .1rem var(--lightOrange); */
     background-color: unset;

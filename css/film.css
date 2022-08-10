@@ -96,7 +96,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1.4rem;
 }
 
 .title-container {
@@ -252,12 +252,12 @@ main {
 .more-info {
     display: block;
     margin: 4rem auto 0 auto;
-    font-size: 1.6rem;
-
+    font-size: 1.8rem;
 }
 
 .film-description a {
-    color: var(--darkPurple);
+    font-weight: 700;
+    color: var(--darkGray);
     background-color: var(--lightPink);
     text-decoration: none;
     padding: 1.8rem;
