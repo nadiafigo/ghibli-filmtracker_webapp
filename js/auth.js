@@ -19,6 +19,8 @@ const auth = getAuth(app);
 
 
 document.getElementById("sign-up").addEventListener('click', function(){
+    alert("You have to enter your information to register")
+    
     const email = document.getElementById("user-email").value  
     const password = document.getElementById("password").value 
     const confirmPassword = document.getElementById("confirm-password").value 
@@ -48,5 +50,4 @@ document.getElementById("sign-up").addEventListener('click', function(){
             
             console.log(errorCode + errorMessage);
         });
-
 })
