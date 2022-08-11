@@ -91,6 +91,14 @@ header {
     user-select: none;
 }
 
+.profile-text {
+    display: none;
+}
+
+.profile-desk {
+    display: none;
+}
+
 .filter__checkbox {
     display: none;
 }
@@ -101,9 +109,7 @@ header {
     user-select: none;
 }
 
-.search-window {  /* ---------------------------------------------SEARCH CONTENT */
-    display: none;
-}
+/* ---------------------------------------------SEARCH CONTENT */
 
 .search__input {
    height: 2.6rem;
@@ -133,42 +139,6 @@ header {
     border: none;
     outline: none;
 }
-
-/* .search__input:focus ~ .search-window {
-    display: block;
-    background-color: var(--white);
-    position: absolute;
-    top: 7rem;
-    list-style-type: none;
-    width: 90%;
-    border-radius: 5px;
-} */
-
-/* .search-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-} */
-
-/* .film-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.arrow-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.search-content ul {
-    list-style: none;
-    font-size: ;
-}
-
-.searchlist-item {
-    text-align: center;
-} */
 
 .filter-container { /* --------------------------------------------FILTER CONTENT */
     display: none;
@@ -229,6 +199,7 @@ main {
 }
 
 .webapp-title {
+    width: 50rem;
     font-size: 4rem;
     font-weight: 400;
     color: var(--white);
@@ -238,7 +209,6 @@ main {
 
 .filmlist-container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     padding-top: 0rem;
@@ -396,4 +366,220 @@ footer {
 
 .attribution a {
     color: var(--darkBlue);
+}
+
+
+
+
+/* -----------------------------------------IPAD */
+
+@media only screen and (min-width: 700px) {
+
+    .header-container {
+        width: 100%;
+        height: 9rem;
+    }
+    
+    .profile-icon {
+        height: 4rem;
+    }
+    
+    .filter-icon {
+        cursor: pointer;
+        height: 4rem;
+        user-select: none;
+    }
+
+    .webapp-title {
+        padding: 2rem 6rem;
+        width: 50rem;
+        font-size: 5rem;
+    }
+    
+    .filmlist-container {
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        margin: auto;
+        grid-gap: 4rem;
+    }
+
+    /* ---------------------------------------------SEARCH CONTENT */
+
+    .search__input {
+        height: 4rem;
+        width: 28rem;
+        border-radius: 2rem;
+    }
+    
+    .search__input input {
+        font-size: 2rem;
+    }
+    
+    .search__input input::placeholder {
+        font-family: var(--fontRubik);
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+    
+
+    
+    .filter-container { /* --------------------------------------------FILTER CONTENT */
+        display: none;
+    }
+
+    .filter-container2 {
+        display: flex;
+        flex-direction: row;
+
+    }
+    
+    .filter__checkbox:checked ~ .filter-container {
+        top: 8.9rem;
+    }
+    
+    .filter-item {
+        font-size: 1.8rem;
+    }
+    
+    .filter__list {
+        width: 28rem;
+        height: 4rem;
+        border-radius: 2rem;
+        font-size: 1.6rem;
+        padding-left: 2rem;
+    }
+    
+    .order, .sort-by {
+        display: block;
+        box-sizing: border-box;
+        margin: 1rem;
+    }
+
+    /* ---------------- FOOTER */
+
+    .attribution {
+        padding: 2rem;
+        color: var(--darkBlue);
+        display: block;
+        font-size: 1.6rem;
+    }
+    
+    .attribution a:hover {
+        color: var(--veryLightPurple);
+    }
+
+}
+
+
+
+
+/* -----------------------------------------DESCKTOP */
+
+@media only screen and (min-width: 1179px) {
+
+    .header-container {
+        width: 100%;
+        height: 7rem;     
+    }
+    
+    .filter-icon {
+        display: none;
+    }
+
+    .profile-icon {
+        height: 3rem;
+    }
+
+    .profile-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .profile-text {
+        display: block;
+        font-family: var(--fontRubik);
+        font-size: 2rem;
+        color: var(--white);
+        margin-left: 1rem;
+    }
+
+    .webapp-title {
+        padding: 2rem 6rem;
+        width: 50rem;
+        font-size: 5rem;
+    }
+    
+    .filmlist-container {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-around;
+    }
+
+    /* ---------------------------------------------SEARCH CONTENT */
+
+    .search__input {
+        height: 3rem;
+        width: 26rem;
+        border-radius: 1.5rem;
+    }
+    
+    .search__input input {
+        font-size: 1.6rem;
+    }
+    
+    .search__input input::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .filter-container { /* --------------------------------------------FILTER CONTENT */
+        display: block;
+        position: relative;
+    }
+
+    .filter-container2 {
+        display: flex;
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+    
+    .filter-item {
+        font-size: 1.8rem;
+    }
+
+    .filter-list-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .filter__list {
+        height: 3rem;
+        width: 26rem;
+        border-radius: 2rem;
+        font-size: 1.4rem;
+        padding-left: 2rem;
+    }
+    
+    .order, .sort-by {
+        display: block;
+        box-sizing: border-box;
+        margin: 1rem;
+    }
+
+}
+
+
+
+
+@media only screen and (min-width: 1500px){
+    .filmlist-container {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-around;
+    }
 }

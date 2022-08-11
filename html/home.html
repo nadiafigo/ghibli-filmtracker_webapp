@@ -15,21 +15,15 @@
     <!----- HEADER ----->
     <header>
         <div class="header-container">
-            <div class="profile-button">
-                <a href="./profile.html">
+            <div>
+                <a class="profile-button" href="./profile.html">
                     <img n class="profile-icon" src="../img/icons/icons8-usuario-30_white.png" alt="">
+                    <span class="profile-text">Profile</span>
                 </a>
             </div>
 
-            <!-- <div class="search-wrapper" id="data-search">
-                <label for="search"></label>
-                <input type="search" id="search">
-            </div> -->
-
             <label for="search__input" class="search__input">
                 <input list="film-search" type="text" id="search__input" class="search__input" placeholder="🔍 What movie are you looking for?">
-                <!-- <datalist list="film-search" id="film-search">
-                </datalist> -->
             </label>
 
             <input type="checkbox" id="filter__checkbox" class="filter__checkbox">
@@ -37,26 +31,28 @@
                     <img class="filter-icon" src="../img/icons/icons8-opciones-para-ordenar-50.png" alt="filter-icon">
                 </label>
 
-            <div class="filter-container"> 
-                <div class="filter-item">
-                    <label for="sort-by">
-                        <span class="sort-by">Sort by</span>
-                        <select name="sort-by" id="sort-by" class="filter__list">
-                            <option value="" id=""></option>
-                            <option value="Duration" id="duration_filter">Duration</option>
-                            <option value="Year" id="year_filter">Year</option>
-                            <option value="Audience Score" id="score_filter">Audience Score</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="filter-item">
-                    <label for="order">
-                        <span class="order">Order</span>
-                        <select name="order" id="order" class="filter__list">
-                            <option value="Ascendant">Ascendant</option>
-                            <option value="Descendant">Descendant</option>
-                        </select>
-                    </label>
+            <div class="filter-container">
+                <div class="filter-container2">
+                    <div class="filter-item">
+                        <label for="sort-by" class="filter-list-container">
+                            <span class="sort-by">Sort by</span>
+                            <select name="sort-by" id="sort-by" class="filter__list">
+                                <option value="" id=""></option>
+                                <option value="Duration" id="duration_filter">Duration</option>
+                                <option value="Year" id="year_filter">Year</option>
+                                <option value="Audience Score" id="score_filter">Audience Score</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <label for="order" class="filter-list-container">
+                            <span class="order">Order</span>
+                            <select name="order" id="order" class="filter__list">
+                                <option value="Ascendant">Ascendant</option>
+                                <option value="Descendant">Descendant</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
             </div> 
 
