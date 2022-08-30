@@ -61,7 +61,9 @@
 
     <!----- MAIN ----->
     <main>
-        <h1 class="webapp-title">STUDIO GHIBLI Filmtracker</h1>
+        <h1 class="webapp-title">STUDIO GHIBLI <span>Filmtracker</span></h1>
+
+        <!-- <img class="webapp-title" src="../img/app-title_small.png" alt="GhibliStudio Filmtracker"> -->
         <div class="filmlist-container" id="filmlist-container"></div>
         <template film-card-template>
             <div>
@@ -101,7 +103,10 @@
         </div>
     </footer>
 
-    <script src="../js/home.js"></script>
+
+
+    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/firebase.js"></script>
 
 </body>
 

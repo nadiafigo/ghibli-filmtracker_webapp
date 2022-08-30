@@ -1,3 +1,4 @@
+
 let url = 'https://ghibliapi.herokuapp.com/films'
 
 const divFilmCards = document.getElementById('filmlist-container');
@@ -30,8 +31,9 @@ fetch(url)
             enlace.setAttribute('id', "card" + i)
             picture.setAttribute('src', film.image)
             filmTitle.innerText = film.title
-            checkmarkInput.setAttribute('id', "film__checkbox" + i)
-            checkmarkLabel.setAttribute('for', "film__checkbox" + i)
+            checkmarkInput.setAttribute('id', film.id)
+            checkmarkInput.addEventListener('click', filmTracking)
+            checkmarkLabel.setAttribute('for', film.id)
             filmYear.innerText = film.release_date
             filmDuration.innerText = film.running_time + " min"
             // filmDescription.innerText = film.description
@@ -48,6 +50,35 @@ fetch(url)
 
     );
 
+// FILMS CHECKING FUNCTION
+
+import {saveCheckedFilm, getCheckedFilms} from "../js/firebase.js";
+    
+const checkedFilms = getCheckedFilms()
+window.addEventListener('DOMContentLoaded', async () => {
+    const querySnapshot = await getCheckedFilms()
+
+    querySnapshot.forEach(doc => {
+        console.log(doc)
+    })
+})
+
+function filmTracking(e) {
+    const filmChecked = e.target
+
+        const checkmarkID = filmChecked.id
+        const checkmarkStatus = filmChecked.checked
+
+        console.log(checkmarkID, checkmarkStatus)
+        saveCheckedFilm(checkmarkID, checkmarkStatus)
+}
+
+
+
+
+
+// FILMS SEARCHING FUNCTION
+
     searchInput.addEventListener("input", e => {
         const value = e.target.value.toLowerCase()
         console.log(value)
@@ -59,6 +90,8 @@ fetch(url)
 
     })
 
+
+// FILMS FILTERING FUNCTION
 
 function Filter(sortSelected, orderSelected) {
     if(sortSelected == "Duration") {
@@ -104,42 +137,3 @@ function Filter(sortSelected, orderSelected) {
         orderSelected = e.target.value
         Filter(sortSelected, orderSelected)
     });
-
-
-
-
-        // AscendantOrder.addEventListener("click", f => {
-        //     films.sort((a, b) => {
-        //         return a.duration - b.duration;
-        //     })
-            
-        // })
-        
-        // DescendantOrder.addEventListener("click", f => {
-        //     films.sort((a, b) => {
-        //         return b.duration - a.duration;
-        //     })
-        // })
-
-
-    // if(searchItem.includes(value)) {
-    //     film.element.classList.add('visible')
-    //     film.element.classList.remove('hide')
-    // } else {
-    //     film.element.classList.add('hide')
-    //     film.element.classList.remove('visible')
-    // }
-
-// fetch(url) 
-//     .then((text) => text.json())
-//     .then((data) => {
-//         let search = ""
-//         for(let i = 0; i < data.length; i++) {
-//             info = data[i]
-//             search = `${search}<a href="./html/film.html?film_id=${info.id}"><option>${info.title}</option></a>`
-//             // search = `${search}<option><a href="./html/film.html?film_id=${info.id}">${info.title}</a></option>`
-//     }
-
-//     datalistContainer.innerHTML = search
-
-//     })});
